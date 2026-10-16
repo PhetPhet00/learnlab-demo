@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnLab — แพลตฟอร์มเรียนรู้</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%236958e8%22/%3E%3Cpath d=%22M10 17 Q21 12 31 20 V49 Q21 42 10 46 Z M54 17 Q43 12 33 20 V49 Q43 42 54 46 Z%22 fill=%22none%22 stroke=%22white%22 stroke-width=%224%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M32 20 V49%22 stroke=%22white%22 stroke-width=%223%22/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--bg:#f5f7fb;--ink:#17213d;--muted:#77809a;--purple:#6958e8;--purple2:#8e80ff;--teal:#22b8a7;--line:#e7eaf3;--card:#fff;--surface:#fff;--surface-soft:#f7f8fc;--soft-accent:#f0eeff;--soft-accent-ink:#6958e8;--input-bg:#fff;--ring-hole:#fff;--orange:#ffb454;--shadow:0 10px 30px #0002}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1110;--ink:#e5f4ee;--muted:#9bb0a8;--purple:#35d07f;--purple2:#68e7a0;--teal:#28d7a0;--line:#263b32;--card:#111c18;--surface:#111c18;--surface-soft:#182720;--soft-accent:#183c2b;--soft-accent-ink:#70e8a1;--input-bg:#0d1712;--ring-hole:#111c18;--shadow:0 10px 30px #0005}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:10px 15px;font-weight:700}.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}.sidebar{background:#fff;border-right:1px solid var(--line);padding:25px 16px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;gap:10px;align-items:center;font-weight:900;font-size:23px;letter-spacing:-.5px;padding:0 10px}.logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--purple),#a89dff);display:grid;place-items:center;color:white}.nav{display:grid;gap:7px}.nav button{background:transparent;text-align:left;color:#6e7690;padding:13px 14px}.nav button.active,.nav button:hover{background:#f0eeff;color:var(--purple)}.side-note{margin-top:auto;background:#f4f2ff;border-radius:16px;padding:16px;font-size:13px;color:#69618d;line-height:1.6}.main{padding:28px 32px;max-width:1500px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:25px}.eyebrow{color:var(--muted);font-size:13px}.greeting{font-size:27px;margin:4px 0 0}.profile{display:flex;align-items:center;gap:12px}.avatar{height:42px;width:42px;background:#e8e4ff;color:var(--purple);border-radius:50%;display:grid;place-items:center;font-weight:900}.hero{background:linear-gradient(115deg,#6554e8,#8b7dff);color:#fff;border-radius:22px;padding:27px 30px;display:flex;align-items:center;justify-content:space-between;gap:18px;overflow:hidden;position:relative;min-height:190px}.hero h2{font-size:27px;margin:0 0 9px}.hero p{margin:0 0 18px;color:#e7e3ff}.hero button{background:#fff;color:var(--purple)}.hero-art{font-size:80px;filter:drop-shadow(0 10px 10px #3e2e8a44);padding-right:22px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:28px 0 14px;gap:12px}.section-head h3{margin:0;font-size:19px}.link{background:transparent;color:var(--purple);padding:6px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.course{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;min-width:0}.course-art{height:105px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:14px}.math{background:#f0edff}.english{background:#e5f8f4}.science{background:#fff2df}.course h4{margin:0 0 5px;font-size:17px}.muted{color:var(--muted);font-size:13px}.progress-row{display:flex;justify-content:space-between;font-size:12px;margin:15px 0 7px;color:var(--muted)}.progress{height:7px;background:#eef0f7;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;border-radius:99px;background:var(--purple)}.course-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px}.small-btn{background:#f0eeff;color:var(--purple);padding:9px 12px;font-size:13px}.bottom-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:24px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.panel h3{margin:0 0 15px;font-size:18px}.resume{display:flex;gap:14px;align-items:center}.video-thumb{width:110px;height:75px;border-radius:12px;background:linear-gradient(135deg,#d9d4ff,#eeeaff);display:grid;place-items:center;font-size:30px;flex-shrink:0}.resume h4{margin:0 0 5px}.primary{background:var(--purple);color:white}.score-layout{display:flex;align-items:center;gap:20px}.score-ring{height:105px;width:105px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--teal) 0 72%,#edf0f7 72% 100%);position:relative;flex-shrink:0}.score-ring:before{content:"";position:absolute;inset:9px;background:var(--ring-hole);border-radius:50%}.score-ring strong{z-index:1;font-size:25px}.badge{display:inline-block;background:#e3f8f4;color:#128d80;border-radius:99px;padding:5px 10px;font-size:12px;font-weight:800}.chart{height:95px;width:100%;margin-top:12px}.page{display:none}.page.active{display:block}.page-title{font-size:25px;margin:0 0 6px}.subtext{color:var(--muted);margin:0 0 22px}.field{display:grid;gap:7px;margin:12px 0}.field label{font-size:13px;font-weight:700;color:#58617b}.field input,.field select{padding:12px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--ink);width:100%}.video-box{aspect-ratio:16/9;background:#171c35;border-radius:16px;display:grid;place-items:center;color:white;overflow:hidden}.video-box iframe{width:100%;height:100%;border:0}.lesson-list{display:grid;gap:10px}.lesson{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--line);padding:13px;border-radius:12px;background:#fff}.quiz-option{display:block;width:100%;text-align:left;background:#f7f8fc;border:1px solid var(--line);margin:9px 0;color:var(--ink)}.quiz-option.selected{border-color:var(--purple);background:#f0eeff}.result{background:#e8faf6;border-radius:14px;padding:16px;margin-top:15px}.table{width:100%;border-collapse:collapse}.table td,.table th{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:14px}.table th{color:var(--muted);font-size:12px}.empty{padding:25px;text-align:center;color:var(--muted)}.toast{position:fixed;right:20px;bottom:20px;background:#18213b;color:#fff;padding:13px 18px;border-radius:12px;display:none;box-shadow:0 10px 30px #0002;z-index:10}.modal-back{position:fixed;inset:0;background:#13172f66;display:none;place-items:center;padding:20px;z-index:20}.modal{background:#fff;padding:24px;border-radius:18px;width:min(430px,100%);box-shadow:0 20px 60px #0002}.modal h3{margin-top:0}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.secondary{background:#f0f1f7;color:#4d5670}
+
+/* Theme selector: light mode preserves the original look; dark mode uses charcoal and green. */
+body,.sidebar,.main,.course,.panel,.lesson,.modal,.field input,.field select,.quiz-option{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.sidebar{background:var(--surface);border-color:var(--line)}
+.course,.panel,.lesson,.modal{background:var(--surface);border-color:var(--line)}
+.nav button{color:var(--muted)}
+.nav button.active,.nav button:hover{background:var(--soft-accent);color:var(--soft-accent-ink)}
+.side-note{background:var(--soft-accent);color:var(--muted)}
+.avatar{background:var(--soft-accent);color:var(--soft-accent-ink)}
+.course .progress{background:var(--surface-soft)}
+.small-btn{background:var(--soft-accent);color:var(--soft-accent-ink)}
+.field label{color:var(--muted)}
+.field input,.field select{background:var(--input-bg);color:var(--ink);border-color:var(--line)}
+.quiz-option{background:var(--surface-soft);color:var(--ink);border-color:var(--line)}
+.quiz-option.selected{background:var(--soft-accent);border-color:var(--purple)}
+.secondary{background:var(--surface-soft);color:var(--ink)}
+.result{background:color-mix(in srgb,var(--teal) 14%,var(--surface));color:var(--ink)}
+.score-ring:before{background:var(--ring-hole)}
+.badge{background:color-mix(in srgb,var(--teal) 18%,var(--surface));color:var(--teal)}
+.table td,.table th{border-color:var(--line)}
+.theme-toggle{display:flex;align-items:center;gap:8px;background:var(--surface-soft);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:12px;white-space:nowrap}
+.theme-toggle:hover{border-color:var(--purple)}
+:root[data-theme="dark"] .hero{background:linear-gradient(115deg,#103d2a,#176b43)}
+:root[data-theme="dark"] .hero p{color:#d0f7df}
+:root[data-theme="dark"] .hero button{background:#e3ffed;color:#125532}
+:root[data-theme="dark"] .primary{background:#28b96b;color:#06140c}
+:root[data-theme="dark"] .logo{background:linear-gradient(135deg,#14884d,#36d987);color:#062213}
+:root[data-theme="dark"] .math{background:#20342c}
+:root[data-theme="dark"] .english{background:#173b30}
+:root[data-theme="dark"] .science{background:#3b3220}
+:root[data-theme="dark"] .video-thumb{background:linear-gradient(135deg,#1e4934,#244c3d)}
+:root[data-theme="dark"] .toast{background:#e0f8e9;color:#0a2818}
+
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{position:sticky;top:0;z-index:5;padding:12px;gap:10px;border-right:0;border-bottom:1px solid var(--line)}.brand{font-size:20px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:9px 12px}.side-note{display:none}.main{padding:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bottom-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.main{padding:14px}.topbar{align-items:flex-start}.greeting{font-size:22px}.hero{padding:22px}.hero h2{font-size:22px}.hero-art{font-size:55px;padding:0}.grid{grid-template-columns:1fr}.course-art{height:85px}.profile .who{display:none}.theme-toggle{padding:8px 9px;font-size:12px}.score-layout{gap:12px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><span class="logo" aria-label="LearnLab book logo"><svg viewBox="0 0 48 48" width="26" height="26" role="img" aria-label="หนังสือ"><path d="M5 11c7-3 13-1 19 4v26C18 36 12 35 5 38V11Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M43 11c-7-3-13-1-19 4v26c6-5 12-6 19-3V11Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M24 15v26" stroke="currentColor" stroke-width="2.5"/></svg></span> LearnLab</div>
+  <nav class="nav" aria-label="เมนูหลัก">
+    <button class="active" data-page="home">⌂ &nbsp; หน้าหลัก</button>
+    <button data-page="courses">▤ &nbsp; รายวิชาของฉัน</button>
+    <button data-page="lessons">▶ &nbsp; คลังบทเรียน</button>
+    <button data-page="quiz">☑ &nbsp; แบบทดสอบ</button>
+    <button data-page="progress">▥ &nbsp; พัฒนาการของฉัน</button>
+    <button data-page="profile">◎ &nbsp; โปรไฟล์ผู้เรียน</button>
+  </nav>
+  <div class="side-note"><strong>✨ เคล็ดลับการเรียน</strong><br>เรียนวันละ 20 นาทีอย่างสม่ำเสมอ จะช่วยให้คุณพัฒนาได้ต่อเนื่อง</div>
+</aside>
+<main class="main">
+<header class="topbar">
+ <div><div class="eyebrow">แพลตฟอร์มเรียนรู้ส่วนบุคคล</div><h1 class="greeting" id="greeting">สวัสดี, นักเรียน 👋</h1></div>
+ <div class="profile"><button class="theme-toggle" id="themeToggle" type="button" aria-label="เปลี่ยนธีม" title="เปลี่ยนธีม"><span id="themeIcon">🌙</span><span id="themeLabel">โหมดมืด</span></button><div class="avatar" id="avatar">น</div><div class="who"><strong id="profileName">นักเรียน</strong><div class="eyebrow">ผู้เรียน</div></div></div>
+</header>
+
+<section class="page active" id="page-home">
+ <div class="hero"><div><h2>เรียนรู้ในแบบของคุณ ✨</h2><p>บทเรียนที่เหมาะกับระดับความสามารถของคุณ</p><button onclick="navigate('courses')">เลือกบทเรียน &nbsp; →</button></div><div class="hero-art">📚</div></div>
+ <div class="section-head"><h3>วิชาที่กำลังเรียน</h3><button class="link" onclick="navigate('courses')">ดูทั้งหมด →</button></div>
+ <div class="grid" id="homeCourses"></div>
+ <div class="bottom-grid">
+  <div class="panel"><h3>เรียนต่อจากเดิม</h3><div class="resume"><div class="video-thumb">▶️</div><div style="flex:1"><h4 id="resumeTitle">พื้นฐานสมการเชิงเส้น</h4><div class="muted">วิดีโอ · ประมาณ 13 นาที</div><div style="margin-top:10px"><button class="primary" onclick="navigate('lessons')">ดูบทเรียน</button></div></div></div></div>
+  <div class="panel"><h3>ระดับความสามารถ</h3><div class="score-layout"><div class="score-ring" id="scoreRing"><strong id="overallScore">72</strong></div><div><span class="badge" id="levelBadge">ระดับกลาง</span><p class="muted" id="levelText">ทำแบบทดสอบเพื่อประเมินระดับของคุณ</p></div></div></div>
+ </div>
+</section>
+
+<section class="page" id="page-courses">
+ <h2 class="page-title">รายวิชาของฉัน</h2><p class="subtext">เลือกวิชาที่ต้องการเรียน และติดตามความคืบหน้าของคุณ</p>
+ <div class="grid" id="allCourses"></div>
+</section>
+
+<section class="page" id="page-lessons">
+ <h2 class="page-title">คลังบทเรียน</h2><p class="subtext">เรียนผ่านคลิปวิดีโอ แล้วทำแบบทดสอบเพื่อวัดความเข้าใจ</p>
+ <div class="panel" style="margin-bottom:18px"><div class="field"><label for="subjectFilter">เลือกวิชา</label><select id="subjectFilter" onchange="renderLessons()"><option value="all">ทุกวิชา</option><option value="math">คณิตศาสตร์</option><option value="english">ภาษาอังกฤษ</option><option value="science">วิทยาศาสตร์</option></select></div><div class="video-box" id="videoBox"><div style="text-align:center;padding:20px"><div style="font-size:44px">▶</div><div>เลือกบทเรียนด้านล่างเพื่อเริ่มเรียน</div></div></div><p class="muted" style="margin-bottom:0">หมายเหตุ: ตัวอย่างนี้ใช้วิดีโอสาธิตจาก YouTube หากคลิปไม่แสดง ให้เปิดลิงก์ใน YouTube โดยตรง</p></div>
+ <div class="lesson-list" id="lessonList"></div>
+</section>
+
+<section class="page" id="page-quiz">
+ <h2 class="page-title">แบบทดสอบวัดระดับ</h2><p class="subtext">ตอบคำถามเพื่อประเมินความเข้าใจเบื้องต้นของคุณ คะแนนจะถูกบันทึกไว้ในเครื่องนี้</p>
+ <div class="panel" id="quizPanel"></div>
+</section>
+
+<section class="page" id="page-progress">
+ <h2 class="page-title">พัฒนาการของฉัน</h2><p class="subtext">ดูผลการเรียน คะแนนแบบทดสอบ และความคืบหน้าของแต่ละวิชา</p>
+ <div class="grid" id="progressSummary"></div>
+ <div class="panel" style="margin-top:18px"><h3>ประวัติการทำแบบทดสอบ</h3><div id="historyWrap"></div></div>
+</section>
+
+<section class="page" id="page-profile">
+ <h2 class="page-title">โปรไฟล์ผู้เรียน</h2><p class="subtext">ข้อมูลส่วนตัวและเป้าหมายการเรียนของคุณ</p>
+ <div class="panel" style="max-width:650px"><form id="profileForm">
+  <div class="field"><label for="studentName">ชื่อที่ใช้แสดง</label><input id="studentName" required maxlength="50" placeholder="เช่น พิมพ์ชนก"></div>
+  <div class="field"><label for="studentAge">อายุ</label><input id="studentAge" type="number" min="5" max="100" placeholder="เช่น 18"></div>
+  <div class="field"><label for="studentLevel">ระดับการศึกษา</label><select id="studentLevel"><option>มัธยมต้น</option><option>มัธยมปลาย</option><option>อาชีวศึกษา</option><option>มหาวิทยาลัย</option><option>บุคคลทั่วไป</option></select></div>
+  <div class="field"><label for="dailyGoal">เป้าหมายการเรียนต่อวัน (นาที)</label><select id="dailyGoal"><option value="10">10 นาที</option><option value="20">20 นาที</option><option value="30">30 นาที</option><option value="60">60 นาที</option></select></div>
+  <button class="primary" type="submit">บันทึกข้อมูล</button>
+ </form><p class="muted">ข้อมูลโปรไฟล์ คะแนน และความคืบหน้าจะบันทึกลงฐานข้อมูล SQLite ของเซิร์ฟเวอร์เดโม่</p></div>
+</section>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-back" id="modalBack"><div class="modal"><h3 id="modalTitle">เริ่มเรียน</h3><p id="modalText">ต้องการเริ่มเรียนวิชานี้หรือไม่?</p><div class="modal-actions"><button class="secondary" onclick="closeModal()">ยกเลิก</button><button class="primary" id="modalConfirm">เริ่มเรียน</button></div></div></div>
+<script>
+const COURSES=[
+ {id:'math',name:'คณิตศาสตร์',desc:'สมการและการคิดวิเคราะห์',lessons:12,emoji:'📐',art:'math',video:'https://www.youtube-nocookie.com/embed/2ZzuZvz33X0',topics:['พื้นฐานสมการเชิงเส้น','เศษส่วนและทศนิยม','การแก้โจทย์ปัญหา']},
+ {id:'english',name:'ภาษาอังกฤษ',desc:'คำศัพท์และการสื่อสาร',lessons:18,emoji:'🌎',art:'english',video:'https://www.youtube-nocookie.com/embed/juKd26qkNAw',topics:['คำศัพท์ในชีวิตประจำวัน','ไวยากรณ์พื้นฐาน','ฝึกฟังและสนทนา']},
+ {id:'science',name:'วิทยาศาสตร์',desc:'สำรวจโลกและสิ่งรอบตัว',lessons:10,emoji:'🔬',art:'science',video:'https://www.youtube-nocookie.com/embed/ dQw4w9WgXcQ'.replace(' ',''),topics:['แรงและการเคลื่อนที่','ระบบสุริยะ','พลังงานรอบตัว']}
+];
+const QUESTIONS=[
+ {q:'ถ้า 2x + 4 = 10 แล้ว x มีค่าเท่าใด?',opts:['2','3','4','7'],a:1,subject:'คณิตศาสตร์',explain:'2x = 10 − 4 = 6 ดังนั้น x = 3'},
+ {q:'คำว่า “Thank you” มีความหมายว่าอะไร?',opts:['ขอโทษ','สวัสดี','ขอบคุณ','ลาก่อน'],a:2,subject:'ภาษาอังกฤษ',explain:'Thank you แปลว่า ขอบคุณ'},
+ {q:'ดาวเคราะห์ดวงใดอยู่ใกล้ดวงอาทิตย์มากที่สุด?',opts:['โลก','ดาวอังคาร','ดาวพฤหัสบดี','ดาวพุธ'],a:3,subject:'วิทยาศาสตร์',explain:'ดาวพุธเป็นดาวเคราะห์ที่อยู่ใกล้ดวงอาทิตย์ที่สุด'},
+ {q:'ผลรวมของมุมภายในสามเหลี่ยมเท่ากับกี่องศา?',opts:['90°','180°','270°','360°'],a:1,subject:'คณิตศาสตร์',explain:'มุมภายในของสามเหลี่ยมรวมกันเท่ากับ 180 องศา'},
+ {q:'เลือกประโยคภาษาอังกฤษที่ถูกต้อง',opts:['She are happy.','She is happy.','She am happy.','She be happy.'],a:1,subject:'ภาษาอังกฤษ',explain:'ใช้ is กับประธานเอกพจน์บุรุษที่สาม เช่น She'},
+ {q:'น้ำบริสุทธิ์มีสูตรทางเคมีข้อใด?',opts:['CO₂','O₂','H₂O','NaCl'],a:2,subject:'วิทยาศาสตร์',explain:'น้ำประกอบด้วยไฮโดรเจน 2 อะตอมและออกซิเจน 1 อะตอม'}
+];
+const KEY='learnlab_demo_v1';
+const THEME_KEY='learnlab_theme';
+function applyTheme(theme){const dark=theme==='dark';document.documentElement.dataset.theme=dark?'dark':'light';document.getElementById('themeIcon').textContent=dark?'☀️':'🌙';document.getElementById('themeLabel').textContent=dark?'โหมดสว่าง':'โหมดมืด';document.getElementById('themeToggle').setAttribute('aria-label',dark?'เปลี่ยนเป็นธีมสว่าง':'เปลี่ยนเป็นธีมมืด');localStorage.setItem(THEME_KEY,dark?'dark':'light')}
+function initTheme(){let saved='light';try{saved=localStorage.getItem(THEME_KEY)||'light'}catch(e){}applyTheme(saved)}
+const defaultState={profile:{name:'นักเรียน',age:'',level:'มัธยมปลาย',goal:'20'},progress:{math:65,english:42,science:80},completed:[],history:[],lastScore:null};
+let state=loadState(),quizAnswers={},activeQuestion=0,modalCourse=null;
+function getClientId(){let id=localStorage.getItem('learnlab_client_id');if(!id){id=(crypto.randomUUID?crypto.randomUUID():('ll'+Date.now().toString(36)+Math.random().toString(36).slice(2))).replace(/[^A-Za-z0-9_-]/g,'');localStorage.setItem('learnlab_client_id',id)}return id}
+const clientId=getClientId();
+function loadState(){try{return {...defaultState,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){return JSON.parse(JSON.stringify(defaultState))}}
+let saveQueue=Promise.resolve();
+function saveState(){localStorage.setItem(KEY,JSON.stringify(state));renderHeader();renderHome();renderProgress();const snapshot=JSON.parse(JSON.stringify(state));saveQueue=saveQueue.then(()=>fetch('/api/state',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({client_id:clientId,state:snapshot})})).then(r=>{if(!r.ok)throw new Error('save failed');return r.json()}).catch(()=>{toast('บันทึกในเบราว์เซอร์แล้ว แต่ยังเชื่อมฐานข้อมูลไม่ได้')});}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2400)}
+function navigate(page){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+page).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));if(page==='courses')renderCourses();if(page==='lessons')renderLessons();if(page==='quiz')renderQuiz();if(page==='progress')renderProgress();if(page==='profile')fillProfile();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.page)));
+document.getElementById('themeToggle').addEventListener('click',()=>applyTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+initTheme();
+function renderHeader(){const n=state.profile.name||'นักเรียน';document.getElementById('greeting').textContent=`สวัสดี, ${n} 👋`;document.getElementById('profileName').textContent=n;document.getElementById('avatar').textContent=n.slice(0,1)}
+function courseCard(c){const p=state.progress[c.id]||0;return `<article class="course"><div class="course-art ${c.art}">${c.emoji}</div><h4>${c.name}</h4><div class="muted">${c.desc}</div><div class="progress-row"><span>${c.lessons} บทเรียน</span><strong>${p}%</strong></div><div class="progress"><span style="width:${p}%"></span></div><div class="course-foot"><span class="muted">${p>=100?'เรียนครบแล้ว':'กำลังเรียน'}</span><button class="small-btn" onclick="startCourse('${c.id}')">เข้าเรียน →</button></div></article>`}
+function renderHome(){document.getElementById('homeCourses').innerHTML=COURSES.map(courseCard).join('');const score=state.lastScore===null?72:state.lastScore;document.getElementById('overallScore').textContent=score;document.getElementById('scoreRing').style.background=`conic-gradient(var(--teal) 0 ${score}%,#edf0f7 ${score}% 100%)`;let level=score>=80?'ระดับสูง':score>=50?'ระดับกลาง':'ระดับเริ่มต้น';document.getElementById('levelBadge').textContent=level;document.getElementById('levelText').textContent=state.lastScore===null?'คะแนนเริ่มต้นตัวอย่าง · ทำแบบทดสอบเพื่อประเมินจริง':`อัปเดตจากแบบทดสอบล่าสุด ${score}/100`;document.getElementById('resumeTitle').textContent=state.completed.length?`เรียนต่อ: ${state.completed[state.completed.length-1]}`:'พื้นฐานสมการเชิงเส้น'}
+function renderCourses(){document.getElementById('allCourses').innerHTML=COURSES.map(courseCard).join('')}
+function startCourse(id){modalCourse=COURSES.find(c=>c.id===id);document.getElementById('modalTitle').textContent='เริ่มเรียน'+modalCourse.name;document.getElementById('modalText').textContent=`วิชานี้มี ${modalCourse.lessons} บทเรียน คุณสามารถดูคลิปและทำแบบทดสอบได้`;document.getElementById('modalBack').style.display='grid';document.getElementById('modalConfirm').onclick=()=>{closeModal();document.getElementById('subjectFilter').value=id;navigate('lessons');playLesson(id,0)}}
+function closeModal(){document.getElementById('modalBack').style.display='none'}
+function renderLessons(){const filter=document.getElementById('subjectFilter').value;const cs=COURSES.filter(c=>filter==='all'||c.id===filter);document.getElementById('lessonList').innerHTML=cs.flatMap(c=>c.topics.map((topic,i)=>`<div class="lesson"><div><strong>${c.emoji} ${topic}</strong><div class="muted">${c.name} · บทที่ ${i+1} · วิดีโอแนะนำ</div></div><button class="small-btn" onclick="playLesson('${c.id}',${i})">▶ เรียน</button></div>`)).join('')}
+function playLesson(id,i){const c=COURSES.find(x=>x.id===id);const title=c.topics[i%c.topics.length];document.getElementById('videoBox').innerHTML=`<iframe src="${c.video}" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>`;document.getElementById('resumeTitle').textContent=title;if(!state.completed.includes(title))state.completed.push(title);state.progress[id]=Math.min(100,(state.progress[id]||0)+5);saveState();toast('บันทึกความคืบหน้าแล้ว')}
+function renderQuiz(){quizAnswers={};activeQuestion=0;document.getElementById('quizPanel').innerHTML=`<div class="section-head" style="margin-top:0"><h3>แบบทดสอบพื้นฐาน</h3><span class="badge">6 ข้อ · คะแนนเต็ม 100</span></div><div id="questionArea"></div><div style="display:flex;justify-content:space-between;gap:10px;margin-top:18px"><button class="secondary" id="prevQ" onclick="moveQuestion(-1)">← ก่อนหน้า</button><button class="primary" id="nextQ" onclick="moveQuestion(1)">ถัดไป →</button></div><div id="quizResult"></div>`;drawQuestion()}
+function drawQuestion(){const q=QUESTIONS[activeQuestion];document.getElementById('questionArea').innerHTML=`<div class="muted">คำถาม ${activeQuestion+1} จาก ${QUESTIONS.length} · ${q.subject}</div><h3 style="line-height:1.5;margin-top:12px">${q.q}</h3>${q.opts.map((o,i)=>`<button class="quiz-option ${quizAnswers[activeQuestion]===i?'selected':''}" onclick="chooseAnswer(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}`;document.getElementById('prevQ').disabled=activeQuestion===0;document.getElementById('prevQ').style.opacity=activeQuestion===0?'.45':'1';document.getElementById('nextQ').textContent=activeQuestion===QUESTIONS.length-1?'ส่งคำตอบ ✓':'ถัดไป →'}
+function chooseAnswer(i){quizAnswers[activeQuestion]=i;drawQuestion()}
+function moveQuestion(d){if(d===1&&activeQuestion===QUESTIONS.length-1){submitQuiz();return}activeQuestion=Math.max(0,Math.min(QUESTIONS.length-1,activeQuestion+d));drawQuestion()}
+function submitQuiz(){const answered=Object.keys(quizAnswers).length;if(answered<QUESTIONS.length){if(!confirm(`คุณตอบแล้ว ${answered}/${QUESTIONS.length} ข้อ ต้องการส่งคำตอบหรือไม่?`))return}let correct=0;QUESTIONS.forEach((q,i)=>{if(quizAnswers[i]===q.a)correct++});const score=Math.round(correct/QUESTIONS.length*100);state.lastScore=score;state.history.unshift({date:new Date().toLocaleDateString('th-TH'),score,correct,total:QUESTIONS.length});state.history=state.history.slice(0,20);QUESTIONS.forEach(q=>{const c=COURSES.find(c=>c.name===q.subject);if(c&&quizAnswers[QUESTIONS.indexOf(q)]===q.a)state.progress[c.id]=Math.min(100,(state.progress[c.id]||0)+3)});saveState();const level=score>=80?'ระดับสูง':score>=50?'ระดับกลาง':'ระดับเริ่มต้น';document.getElementById('questionArea').innerHTML=`<div class="result"><h3>ทำแบบทดสอบเสร็จแล้ว 🎉</h3><div style="font-size:36px;font-weight:900">${score}/100</div><p>ตอบถูก ${correct} จาก ${QUESTIONS.length} ข้อ · ผลประเมิน: <strong>${level}</strong></p><p class="muted">ใช้ผลนี้เป็นแนวทางเบื้องต้นเท่านั้น ระดับยังไม่ได้ผ่านการรับรองทางวิชาการ</p><button class="primary" onclick="showAnswers()">ดูเฉลย</button> <button class="secondary" onclick="renderQuiz()">ทำใหม่</button></div>`;document.getElementById('prevQ').style.display='none';document.getElementById('nextQ').style.display='none';toast('บันทึกคะแนนแล้ว')}
+function showAnswers(){document.getElementById('questionArea').innerHTML=QUESTIONS.map((q,i)=>`<div class="lesson" style="margin-top:10px;display:block"><strong>${i+1}. ${q.q}</strong><p style="margin:8px 0;color:var(--teal)">คำตอบ: ${q.opts[q.a]}</p><div class="muted">${q.explain}</div></div>`).join('')}
+function renderProgress(){const avg=state.history.length?Math.round(state.history.reduce((s,h)=>s+h.score,0)/state.history.length):0;const done=state.completed.length;document.getElementById('progressSummary').innerHTML=`<div class="panel"><div class="muted">คะแนนล่าสุด</div><div style="font-size:30px;font-weight:900;margin:8px 0">${state.lastScore===null?'—':state.lastScore+'/100'}</div><div class="muted">ผลแบบทดสอบวัดระดับ</div></div><div class="panel"><div class="muted">บทเรียนที่เปิดเรียน</div><div style="font-size:30px;font-weight:900;margin:8px 0">${done}</div><div class="muted">รายการบทเรียนที่บันทึกไว้</div></div><div class="panel"><div class="muted">คะแนนเฉลี่ย</div><div style="font-size:30px;font-weight:900;margin:8px 0">${state.history.length?avg+'/100':'—'}</div><div class="muted">จากแบบทดสอบทั้งหมด ${state.history.length} ครั้ง</div></div>`;const h=state.history;document.getElementById('historyWrap').innerHTML=h.length?`<table class="table"><thead><tr><th>วันที่</th><th>คะแนน</th><th>ระดับ</th></tr></thead><tbody>${h.map(x=>`<tr><td>${x.date}</td><td><strong>${x.score}/100</strong></td><td>${x.score>=80?'ระดับสูง':x.score>=50?'ระดับกลาง':'ระดับเริ่มต้น'}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">ยังไม่มีประวัติ ลองทำแบบทดสอบครั้งแรกได้เลย</div>'}
+function fillProfile(){document.getElementById('studentName').value=state.profile.name||'';document.getElementById('studentAge').value=state.profile.age||'';document.getElementById('studentLevel').value=state.profile.level||'มัธยมปลาย';document.getElementById('dailyGoal').value=state.profile.goal||'20'}
+document.getElementById('profileForm').addEventListener('submit',e=>{e.preventDefault();state.profile={name:document.getElementById('studentName').value.trim()||'นักเรียน',age:document.getElementById('studentAge').value,level:document.getElementById('studentLevel').value,goal:document.getElementById('dailyGoal').value};saveState();toast('บันทึกโปรไฟล์แล้ว')});
+async function initApp(){
+ renderHeader();renderHome();renderCourses();renderLessons();renderProgress();
+ try{const response=await fetch('/api/state?client_id='+encodeURIComponent(clientId));if(!response.ok)throw new Error('load failed');const data=await response.json();if(data.state){state={...defaultState,...data.state,profile:{...defaultState.profile,...(data.state.profile||{})},progress:{...defaultState.progress,...(data.state.progress||{})}};localStorage.setItem(KEY,JSON.stringify(state));renderHeader();renderHome();renderCourses();renderProgress();} }
+ catch(e){toast('เชื่อมต่อฐานข้อมูลไม่ได้ กรุณาเปิดผ่าน start.bat หรือ python app.py')}
+}
+initApp();
+</script>
+</body></html>
